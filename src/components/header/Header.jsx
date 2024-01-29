@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/movie-logo.png";
 
 const Header = () => {
   const [show, setShow] = useState("top");
@@ -25,6 +25,7 @@ const Header = () => {
   const controlNavbar = () => {
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
+        console.log(mobileMenu)
         setShow("hide");
       } else {
         setShow("show");

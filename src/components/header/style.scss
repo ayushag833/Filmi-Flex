@@ -30,8 +30,9 @@ header {
     .logo {
         cursor: pointer;
         img {
-            height: 50px;
-        }
+            height: 60px;
+            transform: scaleX(1.1);
+        }   
     }
     .menuItems {
         list-style-type: none;
