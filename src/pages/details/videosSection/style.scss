@@ -7,6 +7,15 @@
     color: white;
     margin-bottom: 25px;
   }
+  .noDataTitle {
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    @include md {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   .videos {
     display: flex;
     gap: 10px;

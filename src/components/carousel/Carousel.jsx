@@ -97,7 +97,6 @@ const Carousel = ({ data, loading, endPoint, title }) => {
           </>
         ) : (
           <div className="noDataTitle">
-            {" "}
             {`Sorry, No ${title} are Available`}
           </div>
         )}
