@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
-import { getApiConfiguration,getGenres } from "./store/homeSlice";
+import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -43,11 +43,9 @@ function App() {
     });
 
     const data = await Promise.all(promises);
-    data.map(({ genres }) => {
-      return genres.map((item) => (allGenres[item.id] = item));
+    data?.map(({ genres }) => {
+      return genres?.map((item) => (allGenres[item.id] = item));
     });
-    // console.log(data);
-    // console.log(allGenres);
     dispatch(getGenres(allGenres));
   };
 
